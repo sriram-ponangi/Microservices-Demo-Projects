@@ -79,7 +79,7 @@
 		- Bootstrapping the application properties can be easily done by using a bootstrap.properties or bootstrap.yml file.
 		
 	- There are two ways to get the configurations from the config-server:
-		1. [**Config First Approach:**](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management "readme")
+		1. [**Config First Approach:**](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management/1.%20Config%20First/SpringCloudConfigServer "readme")
 			- Get the properties directly from the Config-Server by looking at the location details specified in the bootstrap.yml file.
 		2. [**Discovery First Approach:**](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management/2.%20Discovery%20First/EurekaServer-ConfigServer "readme")
 			- Get the properties from the Config-Server by requesting for it's location details from the discovery server(there by contacting discovery server first ie., before the config-server. Hence the name Discovery First)
