@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: uat
+  application:
+    name: config-client
+    
+server:
+  port: 0
+
+message:
+  one: Hello there, you have connected to ${spring.profiles.active} instance from the file classpath:/config/config-client-uat.yml
+  two: Test message
+  
+mail:
+  subject: Mail Subject
+  to: to@mail.come
+  from: from@mail.com

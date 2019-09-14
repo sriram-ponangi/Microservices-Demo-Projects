@@ -1,0 +1,40 @@
+#EXAMPLE-1:
+
+#server:
+# port: 8888  
+#spring:
+# profiles:
+#  active: native
+  
+  
+  
+#EXAMPLE-2:
+
+#server:
+# port: 8888
+#spring:
+# profiles:
+#  active: native
+# cloud:
+#  config:
+#   server:
+#    native:
+#     search-locations: file:C:\Users\SRIRAM\Desktop\configs-store
+
+
+
+
+#EXAMPLE-3:
+
+server:
+  port: 8888 
+  
+spring:
+  cloud:
+    config: 
+      server:
+        git:
+          uri: https://github.com/sriram5795/Springboot-Demo-Projects-Configs-Store.git
+          search-paths: config-server first approach/configs/
+          username: xyz
+          password: xyz

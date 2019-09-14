@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: config-client
+    
+server:
+  port: 8081
+
+message:
+  one: Hello there, you have connected to ${spring.profiles.active} instance from the file classpath:/config/config-client-dev.yml
+  two: Demo message
+  
+mail:
+  subject: Mail Subject
+  to: to@mail.come
+  from: from@mail.com  
