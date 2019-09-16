@@ -1,5 +1,5 @@
 # Spring-Boot-Microservices-Demo-Projects
-1. [Centralized Configuration Management in Distibuted Systems](https://github.com/sriram5795/Springboot-Demo-Projects/tree/master/1.%20Configuration%20Management "readme")
+1. [Centralized Configuration Management in Distibuted Systems](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management  "readme")
 
 ## TO-DO:
 2. Service Discovery and Registry
