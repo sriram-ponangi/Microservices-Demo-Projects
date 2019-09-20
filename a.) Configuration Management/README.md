@@ -92,7 +92,7 @@
 2. [**Discovery First Approach:**](https://github.com/sriram5795/Springboot-Demo-Projects/tree/master/1.%20Configuration%20Management/2.%20Discovery%20First/EurekaServer-ConfigServer "readme")
 	- Get the properties from the Config-Server by requesting for it's location details from the discovery server(there by contacting discovery server first ie., before the config-server. Hence the name Discovery First)
 
-### 4. Security in Spring-Cloud-Config-Server:
+### 4. [Security in Spring-Cloud-Config-Server:](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management/3.%20Securing%20the%20Configs)
 - Encrypting Secrets
 - Password protecting REST endpoints
 			
