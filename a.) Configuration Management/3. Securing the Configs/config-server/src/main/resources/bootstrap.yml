@@ -1,6 +1,6 @@
 # Symetric Encryption:
-encrypt:
-  key: SomeRandomCharactersForSymmetricEncryption
+# encrypt:
+#   key: SomeRandomCharactersForSymmetricEncryption
 #------  
 # URL TO VERIFY THE SECCRET IN PLAIN-TEXT:
 # GET http://localhost:8888/symmetric-encryption-sample/dev  
@@ -14,12 +14,12 @@ encrypt:
 
 
 # Asymetric Encrytpion
-#encrypt:
-#  keyStore:
-#    location: classpath:asymetricKey/configServerKeystore.jks
-#    password: MyPassword
-#    alias: mytestkey
-#    secret: MyPassword
+encrypt:
+ keyStore:
+   location: classpath:asymetricKey/configServerKeystore.jks
+   password: MyPassword
+   alias: mytestkey
+   secret: MyPassword
 #------
 #  - Generating a Asymetruc Key using a Java Command Line Utility called "keytool"
 #  - keytool genereates a password protected keystore file (.jks)
