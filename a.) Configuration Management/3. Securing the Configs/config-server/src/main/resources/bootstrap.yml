@@ -1,0 +1,51 @@
+# Symetric Encryption:
+encrypt:
+  key: SomeRandomCharactersForSymmetricEncryption
+#------  
+# URL TO VERIFY THE SECCRET IN PLAIN-TEXT:
+# GET http://localhost:8888/symmetric-encryption-sample/dev  
+#--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+# Asymetric Encrytpion
+#encrypt:
+#  keyStore:
+#    location: classpath:asymetricKey/configServerKeystore.jks
+#    password: MyPassword
+#    alias: mytestkey
+#    secret: MyPassword
+#------
+#  - Generating a Asymetruc Key using a Java Command Line Utility called "keytool"
+#  - keytool genereates a password protected keystore file (.jks)
+#  - This .jks keystore file will contain the private/public key which can be used for encryption/decryption
+#  - The encryption is done with the public key and the decryption with private key.
+#  - To encrypt or decrypt we need to add a library to the JRE called "Java Cryptography Extension"
+#  
+# Command to generate an Asymetruc KeyStore ie., .jks file using JDKs commandLine utility the "Keytool"
+# > keytool -genkeypair -alias mytestkey -keyalg RSA -dname "CN=Web Server,OU=Unit,O=Organization,L=City,S=State,C=US"
+#           -keypass MyPassword -keystore configServerKeystore.jks -storepass MyPassword
+# URL TO VERIFY THE SECCRET IN PLAIN-TEXT:
+# GET http://localhost:8888/asymmetric-encryption-sample/dev
+#--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+
+

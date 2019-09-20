@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: prod
+msg:
+  type: Asymmetric Encryption Example From prod
+  
+secrets:
+  pwd: "{cipher}AQCby9m1OdqM1LMYTQ83osvPrVZYzl9mTg+CAUpHs9mEyQ1xEKlOZ90WKyRMZDxo/ZKWsQbvzUXopDpVDptqdS0XC89RR3tqC7BuyJLuxZExkNoU6R0QUSfsPgH2Zd4x47/p1JDl/TRa3ELNCGB2/LTY5RTMOCtfGv02dXN6U24zHrnYH7hpCewAWvweD4vpX+nzBV4b5r19zXbB6QsBTbeGHTwZ2SAzJwVbWeEBopO1ulmZkWerezgRCHjz5O5x2TWFSWZEfhonJROHo0wMmGxwr3+uxsYKo9J2ouc86IwV1X+4+DxAXwDbySPx5c7ZBP392+1Cro/32xhyyqznV856bl8r3P4C0VLDNRHuj0JNoa+Mp5cn5mZIERx2No5tpxRZp4U4MQq19uZf2aSUruryh39QzVDMNsQG2sYH2Z+Ntw=="

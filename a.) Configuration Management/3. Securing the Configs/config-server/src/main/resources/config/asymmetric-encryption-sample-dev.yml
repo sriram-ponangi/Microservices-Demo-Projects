@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: dev
+msg:
+  type: Asymmetric Encryption Example from dev
+    
+secrets:
+  pwd: "{cipher}AQCENbvjf3TqdZKi4e1Oy7wknx3I1fQCIZ1TX74zaV6+ElQ+Qj3a7cOy5jFJY8ukoqrELOQzIHwDGHWGizmzgbAM3rv52weCBfOeFNZzsWyD9hCh1OEcdoFUH+EbNAfTQ2WRBgQCWZwwGK+8rBIOlPhW2ipsv2kMdKCNXdx1TOXALs1qCxps+Xt64yOby2C7MyHV/MdBfnIEpSbVRDqwk9+MdZY+D34kT6kquAPfHZU+h+9EXw/lnOxbEiQ17pB+NbDLc5qWyofqgDWFKEAk5FpLdebP372xS18AvpEkKI6CrnDvxF8bI8+ZiG4iHmmyf8n0NKoAICD4Fy5FO+jK5S8HCZY6iouYTBwyGV2oHu5X9xQCDwdF5Ly6AfCn8PzUylbVPZfXP79eKX6PsVqETur6"

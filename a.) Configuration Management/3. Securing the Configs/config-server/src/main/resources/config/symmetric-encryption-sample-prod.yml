@@ -1,0 +1,10 @@
+spring:
+ profiles:
+  active: prod
+ application:
+  name: symmetric-encryption-sample
+msg:
+  type: Symmetric Encryption Example from prod
+  
+secrets:
+  pwd: "{cipher}71ecc2a64ce1ae59eef2d7e3462ba6a37a634f86f3acd10655aba3977e117989fcec28a41e0701e3e09ff60fa023bc7bd03d8e53d30b7315afe9d888b7bf0064"
