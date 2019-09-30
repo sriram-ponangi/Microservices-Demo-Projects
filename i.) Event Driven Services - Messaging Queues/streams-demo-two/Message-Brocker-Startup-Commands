@@ -1,0 +1,27 @@
+===========================
+RabbitMQ:
+===========================
+docker run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 8080:15672 rabbitmq:management-alpine
+
+
+===========================
+Kafka:
+===========================
+
+Starting Zookeeper Service:  C:\kafka_2.12-0.10.2.1>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+---------------------------
+
+
+Starting Kafka Sever:        C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-server-start.bat .\config\server.properties
+---------------------------
+
+
+Create Kafka Topic:          C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic javainuse-topic
+---------------------------
+
+
+Start Kafka Producer in CMD: C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic javainuse-topic
+---------------------------
+
+Start Kafka Consumer in CMD: C:\kafka_2.12-0.10.2.1>.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic javainuse-topic --from-beginning
+---------------------------
