@@ -2,7 +2,7 @@
 
 ---
 ## Introduction:
-- Frequently used approaches to manage the configurations in a spring boot services are :
+- Some of the frequently used approaches to manage the configurations in a spring boot services are :
 	1. **Spring Cloud Consul**
 	2. **Spring Cloud Zookeeper**
 	3. **Spring Cloud Config Server**
@@ -33,10 +33,11 @@
 	2. YAML
 	3. properties
 	
-- The supported **config file stores** are:
+- Some of the supported **config file stores** are:
 	1. Git (Default)
 	2. SVN
 	3. File System
+	4. Hashicorp-Vault
 	
 - **Configurations Scope** can also be defined ie., in other words we can define where(Ex: environments:- Dev, Prod, etc.) a set of properties must be applied/used and this can be specified with the help of spring.profiles.active property.
 		
