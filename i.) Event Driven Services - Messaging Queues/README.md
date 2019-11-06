@@ -1,4 +1,4 @@
-# 9. Event Driven Services - Messaging Queues (Kafka / RabbitMQ) 
+# Event Driven Services - Messaging Queues (Kafka / RabbitMQ) 
 
 ---
 ## Introduction:
