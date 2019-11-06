@@ -2,15 +2,14 @@
 
 ---
 ## Introduction:
-- Some of the frequently used approaches to manage the configurations in a spring boot services are :
+- Some of the frequently used approaches to manage the configurations in spring boot services are :
 	1. **Spring Cloud Consul**
 	2. **Spring Cloud Zookeeper**
 	3. **Spring Cloud Config Server**
 
-- Approaches i & ii need integration with third party applications **Consul** and **Zookeeper**.
+- Approaches 1 & 2 need integration with third party applications **Consul** and **Zookeeper**.
 
-- Neither **Consul** nor **Zookeeper** are just configuration servers ie., they are also
-  utilized to perform other common tasks like service-discovery, electing master node etc.
+- Neither **Consul** nor **Zookeeper** are just configuration servers ie., they are also utilized to perform other common tasks like service-discovery, electing master node etc.
   
 - Where as **Spring Cloud Config Server** by spring cloud team can be used as only a configuration server.
 
@@ -22,11 +21,13 @@
 
 - Spring-cloud-config project provides support for both **server** and **client**.
 
-### 1. Config-Server:
+---
 
-- It is a standalone web application
+### **1. Config-Server:**
 
-- Provides REST based interface to access configuration files
+- It is a standalone web application.
+
+- Provides REST based interface to access/fetch configuration files.
 
 - The REST services support the following **response formats**:
 	1. JSON (Default)
@@ -39,16 +40,16 @@
 	3. File System
 	4. Hashicorp-Vault
 	
-- **Configurations Scope** can also be defined ie., in other words we can define where(Ex: environments:- Dev, Prod, etc.) a set of properties must be applied/used and this can be specified with the help of spring.profiles.active property.
-		
-- In the config files store from which, the config-server will be serving the properties as REST API we must:
-	- Add **.properties** or **.yml** files with the following naming convention:
-		- **{application)-{profile}.yml** or **{application)-{profile}.properties**
-			- {application} is the name of the application.
-			- {profile} is the name of the environment the application should run in.
-			- Ex: my-app-prod.yml
+- **Configurations Scope** can also be defined ie., in other words we can define where(Ex: environments:- Dev, Prod, etc.) a set of properties must be applied/used and this can be specified with the help of ***spring.profiles.active*** property.
+
+- **Naming convention of the config files** (.properties or .yaml) saved in the config store from which the spring-cloud-config-server will be fetching and serving the application properties through REST APIs should be like:
+	
+  - ***{application)-{profile}.yml*** or ***{application)-{profile}.properties***
+	- {application} is the name of the application.
+	- {profile} is the name of the environment the application should run in.
+	- Ex: my-app-prod.yml
 			
-- Details about the common REST Endpoints exposed by the Spring-cloud-config-server:
+- Details of **commonly used REST Endpoints** exposed by the Spring-cloud-config-server:
 	- Common Parameters:
 		- **{application}**
 			- Refers to the application name
@@ -77,8 +78,9 @@
 			- For this case the label is specified before
 			- **GET: /{label}/{application}-{profile}.(yml | properties)**
 			- Ex: **/release-1/my-app-dev.yml/** or **/release-1/my-app-dev.properties/** 
-			
-### 2. Config-Client:
+---
+
+### **2. Config-Client:**
 
 - It provides out of the box support to be embedded into a Spring project by just adding a dependency and minimal configuration.
 - The config-client is responsible for bootstrapping and fetching the appropriate properties from the config-server.
@@ -86,19 +88,24 @@
 	
 - Bootstrapping the application properties can be easily done by using a bootstrap.properties or bootstrap.yml file.
 
+---
 
-### 3. Two common ways to get the configurations from the config-server:
-1. [**Config First Approach:**](https://github.com/sriram5795/Springboot-Demo-Projects/tree/master/1.%20Configuration%20Management/1.%20Config%20First/SpringCloudConfigServer "readme")
+### **3. Two common approaches to get the config properties from the config-server:**
+
+- ***[Config First Approach:](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.%29%20Configuration%20Management/1.%20Config%20First/SpringCloudConfigServer "readme")***
 	- Get the properties directly from the Config-Server by looking at the location details specified in the bootstrap.yml file.
-2. [**Discovery First Approach:**](https://github.com/sriram5795/Springboot-Demo-Projects/tree/master/1.%20Configuration%20Management/2.%20Discovery%20First/EurekaServer-ConfigServer "readme")
+
+- ***[Discovery First Approach:](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.%29%20Configuration%20Management/2.%20Discovery%20First/EurekaServer-ConfigServer "readme")***
 	- Get the properties from the Config-Server by requesting for it's location details from the discovery server(there by contacting discovery server first ie., before the config-server. Hence the name Discovery First)
 
-### 4. [Securing secrets](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management/3.%20Securing%20the%20Configs) in the configs:
+---
+### **4. [Securing the secrets](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management/3.%20Securing%20the%20Configs) in the configuration properties:**
 - Encrypting Secrets
 - Password protecting REST endpoints
-			
-### 5. Configuration management also helps in updating the properties in a running application dynamically without any down time:
-- Common example of where the dynamic update is being used is to change the logging levels.
+
+---		
+### **5. [Dynamically updating the properties]() in a running application without any down time:**
+- Common example of where the dynamic update is being used is to change the logging levels (Ex: Debug -> Info).
 - This can be done by hitting the POST: /refresh endpoint provided by spring-boot-actuators dependency.		
 - Updating the application can be done either manually or in an automated way. In both cases we will still need to hit the POST: /refresh API.
 	- Manually:
