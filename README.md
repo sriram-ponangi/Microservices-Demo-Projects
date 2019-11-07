@@ -7,7 +7,7 @@
 - [ ] Circuit Breaker (Hystrix)
 - [ ] Monitoring and Metrics (Dashboards)
 - [ ] Security and Authentication
-- [ ] Message Queues (Redis, Kafka)
+- [ ] Event Driven Services - Messaging Queues (Redis, Kafka)
 - [ ] Synchronous and Asynchronous Services
 - [ ] Reactive Streams (Non blocking & No back pressure)
 - [ ] Web Sockets
