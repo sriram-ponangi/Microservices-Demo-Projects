@@ -179,4 +179,8 @@
 - Create a consumer group
    - Start multiple instances of the same app and observe if only one of the instances in that group are processing/getting the message.
    - Also, stop all instance of the group but keep sending messages into the queue and then start one or few of the instances of the app and check if they are processing the messages sent during their down time.
-- Use MessageSource and custom **Content Types**
+- Using **kafka** for some queues and **rabbitMQ** for others **in the same project.**
+
+---
+## REFERENCES :
+- ### [Doccumentation](https://docs.spring.io/spring-cloud-stream/docs/Brooklyn.SR3/reference/htmlsingle/)

@@ -1,0 +1,31 @@
+server:
+  port: 0
+spring:
+#  kafka:    
+#    binder:
+#      brokers: localhost:9092
+  rabbitmq:
+    host: 192.168.99.101
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: default_channel_messages
+        output:
+          destination: default_channel_messages
+          
+        importantMessageOutChannel:
+          destination: important_message_channel
+        importantMessageInChannel:
+          destination: important_message_channel
+
+        commonMessageOutChannel:
+          destination: common_message_channel
+        commonMessageInChannel:
+          destination: common_message_channel
+          
+      default:
+        contentType: application/json
