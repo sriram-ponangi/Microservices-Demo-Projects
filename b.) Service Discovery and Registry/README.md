@@ -1,1 +1,1 @@
-# 2. Service Discovery and Registry
+# Service Discovery and Registry

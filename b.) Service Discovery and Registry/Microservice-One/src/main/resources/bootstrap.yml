@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: microservice-one
+    
+server:
+  port: 0
+  
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+message:
+  one: Instance ${eureka.instance.instance-id} is invoked
