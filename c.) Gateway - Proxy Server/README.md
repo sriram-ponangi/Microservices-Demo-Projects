@@ -1,1 +1,1 @@
-# 3. Gateway / Proxy Server
+# Gateway - Proxy Server
