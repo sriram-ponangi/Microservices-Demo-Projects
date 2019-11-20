@@ -1,0 +1,8 @@
+$ docker pull redis:3.2-alpine
+
+$ docker container run --rm -itd -p 6379:6379 --name redis redis:3.2-alpine
+
+$ docker exec -it redis redis-cli
+127.0.0.1:6379> keys *
+127.0.0.1:6379> keys "users::1"
+127.0.0.1:6379> del "users::2"

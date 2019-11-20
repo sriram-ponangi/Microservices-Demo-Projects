@@ -1,1 +1,1 @@
-# 5. Database and Caching (I/O)
+# Database and Caching (I/O)

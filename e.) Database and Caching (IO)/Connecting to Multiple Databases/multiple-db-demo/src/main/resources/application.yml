@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: multiple-DB-demo
+  myuserone:
+    driverClassName: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//127.0.0.1:1521/xe
+    validationQuery: SELECT 1 FROM dual
+    password: myuserone
+    username: myuserone
+    tomcat:
+      max-wait: 20000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+  myusertwo:      
+    driverClassName: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//127.0.0.1:1521/xe
+    validationQuery: SELECT 1 FROM dual
+    password: myusertwo
+    username: myusertwo
+    tomcat:
+      max-wait: 20000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+    
+server:
+  port: 9988
