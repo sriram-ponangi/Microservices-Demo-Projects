@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Spring Boot WebSocket</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div style="color: rgb(31, 31, 32); text-align: center">
+    <h1>{{title}}</h1>
+  </div>
+
+  <div class="container" style="width: 400px; margin-top: 20px;">
+
+    <form class="form-inline">
+      <div class="form-group">
+        <label for="connect">Make Connection:</label>
+        <button id="connect" class="btn btn-default" type="button" [disabled]="disabled" (click)="connect()">Connect</button>
+        <button id="disconnect" class="btn btn-default" type="submit" [disabled]="!disabled" (click)="disconnect()">Disconnect</button>
+      </div>
+    </form>
+
+    <form class="form-inline" style="margin-top: 20px;">
+      <div class="form-group">
+        <label for="name">Message:</label>
+        <input type="text" id="name" name="name" class="form-control" [(ngModel)]="name" />
+      </div>
+      <button id="send" class="btn btn-default" type="button" (click)="sendName()">Send</button>
+    </form>
+
+    <table id="conversation" class="table table-striped" style="margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>Response</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let message of messages">
+        <tr>
+          <td>{{message}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</body>
+
+</html>
