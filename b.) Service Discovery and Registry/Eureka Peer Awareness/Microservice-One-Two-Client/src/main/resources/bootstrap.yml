@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: microservice-one-two-client
+
+server:
+  port: 0
+  
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+    lease-renewal-interval-in-seconds: 3
+    lease-expiration-duration-in-seconds: 10
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka1:8761/eureka/,http://eureka2:8762/eureka/,http://eureka3:8763/eureka/}
+
