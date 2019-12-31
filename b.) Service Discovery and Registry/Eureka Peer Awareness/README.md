@@ -3,7 +3,7 @@
 - When running the repicas on the same machine(ie., localhost) while devlopment or for demo purposes we need to add new DNS mapings(loop back address) in the built-in DNS file called hosts.
 
 - File Path:
-	- Windows: **C:\Windows\system32\drivers\etc\**
+	- Windows: **C:\Windows\system32\drivers\etc\\**
 	- Linux: **/etc/hosts**
 
 - Add the following content in the hosts file:
