@@ -183,4 +183,4 @@
 
 ---
 ## REFERENCES :
-- ### [Doccumentation](https://docs.spring.io/spring-cloud-stream/docs/Brooklyn.SR3/reference/htmlsingle/)
+- ### [Documentation](https://docs.spring.io/spring-cloud-stream/docs/Brooklyn.SR3/reference/htmlsingle/)
