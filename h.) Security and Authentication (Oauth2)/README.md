@@ -9,7 +9,7 @@
 ## Setting Up Authorization Server using KeyCloak:
 
 ### Step-1: Download and Start the Keycloak Server in Standalone mode. Then access the admin console.
-![plot](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/blob/master/h.)%20Security%20and%20Authentication%20(Oauth2)/keycloak-auth-server/1.PNG)
+![plot1](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/blob/master/h.)%20Security%20and%20Authentication%20(Oauth2)/keycloak-auth-server/1.PNG)
 ![plot](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/blob/master/h.)%20Security%20and%20Authentication%20(Oauth2)/keycloak-auth-server/2.PNG)
 
 ### Step-2: Create a new Realm (Ex: SpringDemo)
@@ -38,3 +38,8 @@
 ![plot](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/blob/master/h.)%20Security%20and%20Authentication%20(Oauth2)/keycloak-auth-server/15.PNG)
 ![plot](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/blob/master/h.)%20Security%20and%20Authentication%20(Oauth2)/keycloak-auth-server/16.PNG)
 
+
+
+## References:
+- https://davidagood.com/oauth-client-credentials-auto-refresh-spring/
+- https://davidagood.com/spring-security-disable-http-security/
