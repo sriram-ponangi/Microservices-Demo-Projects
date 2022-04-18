@@ -1,0 +1,10 @@
+server:
+  port: 58080
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-url: http://127.0.0.1:8080/auth/realms/SpringDemo
+          jwk-set-uri: http://127.0.0.1:8080/auth/realms/SpringDemo/protocol/openid-connect/certs
