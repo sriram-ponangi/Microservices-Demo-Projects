@@ -9,7 +9,7 @@
 ## Setting Up Authorization Server using KeyCloak:
 
 ### Step-1: Download and Start the Keycloak Server in Standalone mode. Then access the admin console.
-![Step-1](keycloak-auth-server/1.PNG?raw=true)
+![Step-1](keycloak-auth-server/1.PNG)
 ![plot](keycloak-auth-server/2.PNG)
 
 ### Step-2: Create a new Realm (Ex: SpringDemo)
@@ -17,13 +17,13 @@
 ![plot](keycloak-auth-server/4.PNG)
 
 ### Step-3: Create a new Client (Ex: SpringBootDemo)
-![plot](keycloak-auth-server/5.png)
-![plot](keycloak-auth-server/6.png)
-![plot](keycloak-auth-server/7.png)
-![plot](keycloak-auth-server/8.png)
+![plot](keycloak-auth-server/5.PNG)
+![plot](keycloak-auth-server/6.PNG)
+![plot](keycloak-auth-server/7.PNG)
+![plot](keycloak-auth-server/8.PNG)
 
 ### Step-4: Access and note the important URLs for generating JWT token and validating it.
-![plot](keycloak-auth-server/9.png)
+![plot](keycloak-auth-server/9.PNG)
 ![plot](keycloak-auth-server/10.PNG)
 
 ## Setting Up Resource Server using spring-boot-starter-oauth2-resource-server dependency:
