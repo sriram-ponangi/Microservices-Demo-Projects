@@ -1,4 +1,4 @@
-# Spring-Boot-Microservices-Demo-Projects
+# Microservices-Demo-Projects With Spring-Boot
 - [X] **[Centralized Configuration Management in Distibuted Systems](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/a.\)%20Configuration%20Management  "readme")**
 - [X] **[Service Discovery and Registry](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/b.\)%20Service%20Discovery%20and%20Registry)**
 - [X] **[Gateway / Proxy Server (Zuul)](https://github.com/sriram-ponangi/Spring-Boot-Microservices-Demo-Projects/tree/master/c.\)%20Gateway%20-%20Proxy%20Server)**
