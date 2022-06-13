@@ -4,6 +4,7 @@ spring:
     username: batch_user
     password: batch_user
     driver-class-name: com.mysql.cj.jdbc.Driver
+
   batch:
     jdbc:
-      initialize-schema: NEVER
+      initialize-schema: ALWAYS

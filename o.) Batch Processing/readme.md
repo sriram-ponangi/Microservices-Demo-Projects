@@ -25,25 +25,19 @@ The two main components of spring batch:
       * Uses the **_ItemReader_** & **_ItermWriter_** interfaces to process chunks of data.
       * Optionally, **_ItemProcessor_** interface can also be included to perform transformations on the data.
 
-### JobInstance vs JobExecution
-* When a job launcher creates a job it will typically pass the **name** of the job and some **parameters**. Every unique combination of the name and jon parameters creates a new **JobInstance**.
-* When we execute a JobInstance a new **JobExecution** is created.
-* In some situations(like failures) we might execute the same job instance (i.e., with same name & parameters) multiple times. But each time we execute a JobInstance we get a new JobExecution.
-  ![Spring Batch Architecture](notes/4.%20Job%20Instance%20Vs%20Execution.png)
-* Similarly, when a step associated with a job is executed it creates a new StepExecution. A stepExecution is associated with a jobExecution. 
-
-### State Management
+### State / Job Repository  Management
 * The framework stores the metadata on the status/progress of the batch job at various stages to a Job Repository DB.
 * In the case of a failure/termination of the batch job, the metadata stored in job repository is used to restart the job exactly from the appropriate step / data chunk where it failed instead of starting the processing from the beginning.
 * In the image below the overall job failed because the Chunk-2 of the Step-2 failed. Now when the batch job is restarted we would like to only start from the step-2 and chunk-2.  
   ![Failed Step in Job](notes/2.%20Failed%20Step%20in%20Job.png)
-* Spring Batch Job Repository Schema
+
+* ### Spring Batch Job Repository Schema
   ![Job Repository Schema](notes/3.%20Spring%20Batch%20Job%20Repository%20Schema.png)
 
-
-
-
-
-
-
-### Reference Documentation
+* ### JobInstance vs JobExecution From Job Repository Schema
+  * When a job launcher creates a job it will typically pass the **name** of the job and some **parameters**. Every unique combination of the name and jon parameters creates a new **JobInstance**.
+    * **NOTE:** If a JobInstance is successfully executed once it is not possible to re-run that JobInstance again. Instead, a new JobInstance must be created by passing a new parameter to the job. 
+  * When we execute a JobInstance a new **JobExecution** is created.
+  * In some situations(like failures) we might execute the same job instance (i.e., with same name & parameters) multiple times. But each time we execute a JobInstance we get a new JobExecution.
+  * Similarly, when a step associated with a job is executed it creates a new **StepExecution**. A stepExecution is associated with a jobExecution.
+  ![Spring Batch Architecture](notes/4.%20Job%20Instance%20Vs%20Execution.png)
