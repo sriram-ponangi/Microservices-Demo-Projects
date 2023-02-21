@@ -1,0 +1,9 @@
+server:
+  port: 8443
+  ssl:
+    key-store-type: PKCS12
+    key-store: test_keystore.p12
+    key-store-password: changeit
+    key-alias: rootCA
+    key-password: changeit
+    enabled: true
