@@ -1,4 +1,4 @@
-package com.example.tls.demo.client.web;
+package com.example.tls.demo.client.webflux;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AppController {
 
-    @GetMapping("/client/web")
+    @GetMapping("/client/webflux")
     public String getMessage() {
-        return "CLIENT-WEB";
+        return "CLIENT-WEB-FLUX";
     }
 }
