@@ -2,12 +2,12 @@
 
 ### Generating Client KeyStore:
 ```shell
-keytool -genkeypair -alias client -keyalg RSA -keysize 4096 -dname "CN=*,OU=Client,O=MyOrg Ltd,L=Toronto,S=ON,C=CA" -keypass changeit -storetype PKCS12 -keystore client-keystore.p12 -storepass changeit
+keytool -genkeypair -alias client -keyalg RSA -keysize 4096 -ext SAN=dns:localhost,ip:127.0.0.1 -dname "CN=*,OU=Client,O=MyOrg Ltd,L=Toronto,S=ON,C=CA" -keypass changeit -storetype PKCS12 -keystore client-keystore.p12 -storepass changeit
 ```
 
 ### Generating Server KeyStore:
 ```shell
-keytool -genkeypair -alias server -keyalg RSA -keysize 4096 -dname "CN=*,OU=Server,O=MyOrg Ltd,L=Toronto,S=ON,C=CA" -keypass changeit -storetype PKCS12 -keystore server-keystore.p12 -storepass changeit
+keytool -genkeypair -alias server -keyalg RSA -keysize 4096 -ext SAN=dns:localhost,ip:127.0.0.1 -dname "CN=*,OU=Server,O=MyOrg Ltd,L=Toronto,S=ON,C=CA" -keypass changeit -storetype PKCS12 -keystore server-keystore.p12 -storepass changeit
 ```
 
 
@@ -54,7 +54,7 @@ keytool -list -v -keystore client-truststore.p12 -storepass changeit
 keytool -list -v -keystore server-keystore.p12 -storepass changeit
 ```
 
-### Verifying Server KeyStore:
+### Verifying Server TrustStore:
 ```shell
 keytool -list -v -keystore server-truststore.p12 -storepass changeit
 ```
@@ -80,7 +80,7 @@ server:
 > JVM Arguments For REST Client
 ```shell
 -Djavax.net.debug=all
--Djavax.net.ssl.trustStore=classpath:keystores/client-truststore.p12
+-Djavax.net.ssl.trustStore=/absolute/path/to/keystores/client-truststore.p12
 -Djavax.net.ssl.trustStorePassword=changeit
 -Djavax.net.ssl.trustStoreType=PKCS12
 -Djavax.protocol=TLSv1.3
@@ -105,7 +105,7 @@ server:
 > JVM Arguments For REST Client
 ```shell
 -Djavax.net.debug=all
--Djavax.net.ssl.trustStore=classpath:keystores/server-truststore.p12
+-Djavax.net.ssl.trustStore=/absolute/path/to/keystores/server-truststore.p12
 -Djavax.net.ssl.trustStorePassword=changeit
 -Djavax.net.ssl.trustStoreType=PKCS12
 -Djavax.protocol=TLSv1.3
